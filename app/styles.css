@@ -1,0 +1,41 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.user-table table, .user-table th, .user-table td {
+    border: 1px solid black;
+}
+
+.user-table tr:nth-child(even){
+    background-color: lightgrey;
+}
+
+.user-table th{
+    background-color: grey;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+.selected-row {
+    background-color: red !important;
+}
+
+.user-info {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    padding: 10px;
+}
+.address {
+    margin-left: 15px;
+}
