@@ -17,7 +17,36 @@
     <div class="container">
         <h2>Company Employees</h2>
         <user-table users="users" on-select="selectUser(user)"></user-table>
-        <user-info ng-if="selectedUser" user="selectedUser" on-delete="deleteUser(userId)"></user-info>
+        <user-info ng-if="selectedUser" user="selectedUser" on-delete="deleteUser(userId)">
+            <table>
+                <tr>
+                    <td>Username</td>
+                    <td>Name</td>
+                    <td>Email</td>
+                </tr>
+                <tr>
+                    <td><strong>{{selectedUser.username}}</strong></td>
+                    <td><strong>{{selectedUser.name}}</strong></td>
+                    <td><strong>{{selectedUser.email}}</strong></td>
+                </tr>
+                <tr>
+                    <td>Website</td> 
+                    <td>Phone number</td>
+                    
+                </tr>
+                <tr>
+                    <td><strong>{{selectedUser.website}}</strong></td>
+                    <td><strong>{{selectedUser.phone}}</strong></td>
+                </tr>
+            </table>
+            <h5>Address</h5>
+            <div class="address">
+                <p><strong>Street: {{selectedUser.address.street}}</strong></p>  
+                <p><strong>Suite: {{selectedUser.address.suite}}</strong></p>
+                <p><strong>City: {{selectedUser.address.city}}</strong></p>
+                <p><strong>Zip Code: {{selectedUser.address.zipcode}}</strong></p>  
+            <div>   
+        </user-info>
     </div>
 </body>
 </html>
